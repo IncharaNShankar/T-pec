@@ -1,0 +1,13 @@
+Insertion in Binary search tree
+
+
+struct node* insert(struct node* node, int val) 
+{ 
+   
+    if (node == NULL) return newNode(val); 
+    if (val < node->val) 
+        node->left  = insert(node->left, val); 
+    else if (val > node->val) 
+        node->right = insert(node->right, val);   
+    return node; 
+} 
